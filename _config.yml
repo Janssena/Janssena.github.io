@@ -30,9 +30,19 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
-theme: minima
+theme: plainwhite
 plugins:
   - jekyll-feed
+
+plainwhite:
+  name: Alexander Janssen
+  tagline: PhD student Personalized medicine
+  date_format: "%b %-d, %Y"
+  portfolio_image: "assets/portfolio.jpeg"
+
+  social_links:
+    github: Janssena
+    linkedIn: nl/Janssena # format: locale/username
 
 # Exclude from processing.
 # The following items will not be processed, by default.
