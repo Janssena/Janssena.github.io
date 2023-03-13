@@ -14,18 +14,20 @@ green     #859900  operators, other keywords
 */
 
 // $codeRegular: #575757;
-$codeRegular: #586e75;
 // $codeComment: #b0b0b0;
+// $codeGreen: #26713c;
+// $codeCyan: #0e56b1;
+// $codeBlue: #1a3d73;
+// $codeRed: #d33641;
+
+
+$codeRegular: #586e75;
 $codeComment: #b3bdbd;
 $codeType: #93a1a1;
 $codePurple: #9f77e9;
-// $codeGreen: #26713c;
 $codeGreen: #859900;
-// $codeCyan: #0e56b1;
 $codeCyan: #2aa198;
-// $codeBlue: #1a3d73;
 $codeBlue: #268bd2;
-// $codeRed: #d33641;
 $codeRed: #cb4b16;
 
 .highlight { background-color: #fdf6e3; color: $codeRegular }
