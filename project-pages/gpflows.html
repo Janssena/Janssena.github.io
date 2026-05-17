@@ -1,0 +1,94 @@
+<!-- 
+  IMPORTANT! 
+  
+  Keep this file unchanged to use as a template for all future project pages. 
+
+  For every new project you add to your portfolio, make a copy of this file in the
+  'project-pages' folder with a name related to the project.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <!-- 
+      TODO
+
+      Upload your Unemployable (or whatever photo you like) to the assets/images folder
+      and change the name of the image below to match the uploaded one
+
+      Change the title in the <title> tag to whatever you would like the title of your portfolio to be
+
+      This should be the same across all pages.
+     -->
+  <link rel="icon" href="../assets/images/aj-small.png" />
+  <title>Project -- GPFlows</title>
+  <meta name="description" content="My portfolio.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/typography.css">
+  <link rel="stylesheet" href="../css/utilities.css">
+
+  <script defer src="../js/script.js"></script>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <a class="nav-title-link" href="/index.html">
+      <span class="nav-logo"></span>
+      <span class="nav-title">Janssen et al.</span>
+    </a>
+    <a class="button" href="mailto:alexanderjanssen@live.com">
+      <span class="button-text">Contact Me</span>
+    </a>
+  </div>
+
+  <div id="main-content">
+
+    <div id="project-header">
+      <div class="main-title">> Gaussian Process Flows</div>
+      <div class="body-text">
+        Laying the groundworks for a foundational model in pharmacometrics through Bayesian Inference over mechanistic models.
+      </div>
+      <image class="project-header-image" src="../assets/images/gpflows.png">
+    </div>
+
+    <div id="project-details">
+      <div class="project-details-content">
+        <div class="subheader-text">Background</div>
+        <div class="body-text">
+          The field of pharmacometrics studies the quantitative relationship between drug disposition in the body (pharmacokinetics; PK) and the resulting biological effect (pharmacodynamics; PD). These techniques are indispensable throughout the drug development pipeline. They are foundational to drug approval, enabling regulators to establish safe and effective dosage ranges for diverse patient populations, and are in clinical practice to derive model-informed and personalised treatment regimens for patients based on recorded information and clinical measurements.
+        </div>
+        <div class="body-text">
+          Pharmacometric models are based around a mechanistic model, usually represented by a system of differential equations, that encodes a mathematical representation of the principles underpinning drug absorption, distribution, metabolism and elimination. Recently, NeuralODE-based approaches have emerged as promising tools to learn such dynamical systems directly from data. However, they are often difficult to train and interpret, prone to overfitting, and empirically show unreliable extrapolation beyond training data. To address these issues, I have developed Gaussian Process Flows (GPFlows), a method to perform Bayesian Inference over the space of mechanistic models.
+        </div>
+        <div class="subheader-text">Objectives and Achievements</div>
+        <div class="body-text">
+          GPFlows are flexible full random effect models that naturally limit complexity while capable of learning subject-specific dynamics. The framework is build in such a way that model components can be visualised to interpret learned effects. Adopting methods from Bayesian statistics unlocks several additional benefits such as principled uncertainty estimates, continuous learning as new data becomes available, and more faithful model comparison. A unique benefit of GPFlows is that it compresses data to a set of inducing points, allowing for safe data sharing without risks of re-identification.
+        </div>
+        <div class="body-text">
+          We compared the performance of GPFlows on several real-world data sets, including pharmacokinetic (PK) and pharmacodynamic (PD) data, and found that the model out competes traditional non-linear mixed effects (NLME) models and NeuralODEs in terms of negative marginal log likelihoods (NLL) and root mean squared error (RMSE) of predictions. Compared to the NLME, GPFlows depicted significantly lower RMSE (reductions ranging from 10-50%), while having similar or better NLL. Although NeuralODEs also improved over NLME in terms of RMSE, NLL was generally worse, which is striking given its estimates are likely overestimated seeing as neural network parameters are not included in the marginalisation. In all cases, GPFlows was able to represent more complex mechanistic effects based on a simple initial blueprint.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer">
+    <a class="icon-link" target="_blank" href="https://www.researchgate.net/profile/Alexander-Janssen-6">
+      <span class="footer-icon icon-scholar"></span>
+    </a>
+    <a class="icon-link" target="_blank" href="https://github.com/Janssena">
+      <span class="footer-icon icon-github"></span>
+    </a>
+    <a class="icon-link" href="mailto:alexanderjanssen@live.com">
+      <span class="footer-icon icon-mail"></span>
+    </a>
+  </div>
+
+</body>
+
+</html>

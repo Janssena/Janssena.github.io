@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="./assets/images/aj-small.png" />
+  <title>Alexander Janssen's Portfolio</title>
+  <meta name="description" content="My portfolio.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/typography.css">
+  <link rel="stylesheet" href="./css/utilities.css">
+
+  <script defer src="./js/script.js"></script>
+</head>
+
+<body>
+  <div class="navbar">
+    <a class="nav-title-link" href="./index.html">
+      <span class="nav-logo"></span>
+      <span class="nav-title">Janssen et al.</span>
+    </a>
+    <a class="button" href="mailto:alexanderjanssen@live.com">
+      <span class="button-text">Contact Me</span>
+    </a>
+  </div>
+
+
+  <!-- MAIN PAGE CONTENT -->
+  <div id="main-content">
+
+    <!-- PORTFOLIO HEADER -->
+    <div id="portfolio-header">
+      <div id="portfolio-header-image-container">
+        <img src="./assets/images/aj.png" class="portfolio-header-image">
+        <span class="image-caption">Here's an pixel art reproduction of me.
+          <a class="no-underline" target="_blank" href="https://www.linkedin.com/in/alexander-janssen-1b3992161/">
+            (I do exist though)</a>
+        </span>
+      </div>
+
+      <!-- 
+            TODO
+
+            - Change the main-title to whatver you want
+            - Change the body-text after that to a quick introduction to what you do
+            - Edit the button text if you feel like it. It will link to the projects section below.
+          -->
+      <div id="portfolio-header-text-container">
+        <div class="header-text">
+          <span class="main-title">Heya! I'm Alexander.</span>
+          <div class="body-text">I’m a 32yo research fellow and university lecturer at the AmsterdamUMC and
+            clinical use-case leader in the <a class="no-underline" href="https://phems.eu/"
+              target="_blank">phems.eu</a>
+            consortium at the ErasmusMC. Oh, and I am also a research associate at Monash University, Australia.</div>
+        </div>
+        <a class="button" id="my-work-link">
+          <span class="button-text">Check out my projects</span>
+          <span class="right-arrow-icon"></span>
+        </a>
+      </div>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <!-- 
+        TODO
+
+        - Change the subheader-text to whatever header you want
+        - Add paragraphs using the <div class="body-text"></div> elements in the "about-section-content"
+      -->
+    <div id="about-section">
+      <span class="subheader-text">About Me</span>
+      <div class="about-section-content">
+        <div class="body-text">
+          I am a Computational Scientist specializing in applying advanced generative AI methodologies to solve complex,
+          multi-scale design problems. My expertise lies in translating deep scientific challenges into robust, data-driven 
+          computational frameworks designed to predict and create novel solutions.
+        </div>
+        <div class="body-text">
+          My core focus is on Generative Design, utilizing state-of-the-art generative models such as Flow-based methods
+          and Diffusion models. I apply these techniques within the context of physical constraints, guiding the
+          design process via (implicit) free energy minimization principles. I also have detailed expertise using
+          probabilistic methods, including Variational Inference and Bayesian Active Learning, which are foundational
+          techniques for robust handling of uncertainty and ensuring optimal generalization across high-dimensional
+          design spaces.
+        </div>
+        <div class="body-text">
+          My background demonstrates a strong ability to navigate several high-complexity scientific domains. I have a
+          proven record of developing unifying computational frameworks and pioneering the adoption of machine learning
+          in highly regulated fields. My work in structural and molecular design, including the development of de novo
+          protein design pipelines, has prepared me to tackle the multi-scale complexity inherent in the design of novel
+          molecules and functional materials.
+          <br><br>
+          I am motivated by difficult, deep problems that reward computational and unconventional thinking, driving me
+          to build the next generation of exciting scientific solutions to our greatest challenges in health, energy,
+          and climate change.
+        </div>
+
+        <!-- <div class="body-text">Within pharmacometrics, I was one of the first to work on adopting machine learning
+          algoritms in the field, even though (and perhaps exactly because) I had no formal training in the field. This
+          has culminated in an invitation to speak at the PAGE meeting during the first year of my PhD, a venue where I
+          have since presented my work three more times and was a receipient of the prestigeous Lewis Sheiner award for
+          promising students in pharmacometrics.
+
+          I have designed and implemented the deep compartment model framework, which brings together all differential
+          equation based methods under a single umbrella to accelerate research in the field. After my latest project
+          bringing Bayesian methods, I consider AI in pharmacometrics to be largely "solved", and recently have
+          been focussing my time more and more at the problem of computational drug design.
+        </div> -->
+      </div>
+    </div>
+
+    <!-- PROJECTS / MY WORK SECTION -->
+    <div id="my-work-section">
+      <!-- TODO - Change the subheader-text to whatever you want the Projects section header to say -->
+      <span class="subheader-text">Main Projects</span>
+
+      <div class="projects-container">
+        <!-- 
+            TODO
+
+            This is where the project cards live. Here's a base level project card for you to copy:
+            <div class="project-card">
+              <img src="./assets/images/IMAGE_NAME" class="project-image">
+              <div class="project-card-text-container">
+                <div class="subheader-text project-title">PROJECT_NAME</div>
+                <div class="body-text project-card-text">SMALL_PROJECT_DESCRIPTION</div>
+              </div>
+              <a class="button" href="./project-pages/PROJECT_PAGE_NAME.html">
+                <span class="button-text">Read More</span>
+                <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+              </a>
+            </div>
+
+            - To add a project to the this area, copy the above, paste it below this comment, and change the following:
+                - IMAGE_NAME: the name of the image file in assets/images
+                - PROJECT_NAME: the name of the project (keep it short, it only shows 1 line)
+                - SMALL_PROJECT_DESCRIPTION: a quick project description (max 4 lines)
+                - PROJECT_PAGE_NAME.html: the html filename for the project (must be in project-pages folder)
+          -->
+        <div class="project-card">
+          <img src="./assets/images/phems.png" class="project-image">
+          <div class="project-card-text-container">
+            <div class="subheader-text project-title">phems.eu</div>
+            <div class="body-text project-card-text">Enabling privacy-aware sharing of sensitive medical data
+              across paediatric hospitals in Europe using federated learning.</div>
+          </div>
+          <a class="button" href="/project-pages/phems.html">
+            <span class="button-text">Read More</span>
+            <span class="right-arrow-icon"></span>
+          </a>
+        </div>
+        <div class="project-card">
+          <img src="./assets/images/binder-design-small.png" class="project-image">
+          <div class="project-card-text-container">
+            <div class="subheader-text project-title">Binder design</div>
+            <div class="body-text project-card-text">
+              Design and development of a modular optimisation pipeline for (contrastive) multi-target binder design.
+            </div>
+          </div>
+          <a class="button" href="./project-pages/binder-design.html">
+            <span class="button-text">Read More</span>
+            <span class="right-arrow-icon"></span>
+          </a>
+        </div>
+        <div class="project-card">
+          <img src="./assets/images/gpflows.png" class="project-image">
+          <div class="project-card-text-container">
+            <div class="subheader-text project-title">Gaussian Process Flows</div>
+            <div class="body-text project-card-text">
+              Laying the groundworks for a foundational model in pharmacometrics through Bayesian Inference over mechanistic models.
+            </div>
+          </div>
+          <a class="button" href="./project-pages/gpflows.html">
+            <span class="button-text">Read More</span>
+            <span class="right-arrow-icon"></span>
+          </a>
+        </div>
+        <div class="project-card">
+          <img src="./assets/images/ribosome.png" class="project-image">
+          <div class="project-card-text-container">
+            <div class="subheader-text project-title">Ribosome.jl</div>
+            <div class="body-text project-card-text">
+              A fast, high-level programming language for generative binder design that runs on any computational infrastructure.
+            </div>
+          </div>
+          <a class="button" href="./project-pages/ribosome.html">
+            <span class="button-text">Read More</span>
+            <span class="right-arrow-icon"></span>
+          </a>
+        </div>
+        <div class="project-card">
+          <img src="./assets/images/opticlot.png" class="project-image">
+          <div class="project-card-text-container">
+            <div class="subheader-text project-title">OPTICLOT</div>
+            <div class="body-text project-card-text">
+              Delivering tailored dosing regimens to patients with rare bleeding disorders all ove the world.
+            </div>
+          </div>
+          <a class="button" href="./project-pages/opticlot.html">
+            <span class="button-text">Read More</span>
+            <span class="right-arrow-icon"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="my-work-section">
+      <span class="subheader-text">Open Source Projects</span>
+      <div class="oss-container">
+        <div class="oss-item">
+          <a class="oss-title-link" href="https://github.com/Janssena/DeepCompartmentModels.jl" target="_blank">
+            DeepCompartmentModels.jl:
+          </a>
+          <span class="oss-description">
+            Julia package for defining and training deep compartment models for pharmacometric applications.
+          </span>
+        </div>
+        <div class="oss-item">
+          <a class="oss-title-link" href="https://github.com/Janssena/GenerativeFlows.jl" target="_blank">
+            GenerativeFlows.jl:
+          </a>
+          <span class="oss-description">
+            Julia package bringing together Flow-based generative models (Normalising Flows, Diffusion, and
+            Flow Matching) under a single, simple interface.
+          </span>
+        </div>
+        <div class="oss-item">
+          <a class="oss-title-link" href="https://github.com/Janssena/LuxFold.jl" target="_blank">
+            LuxFold.jl
+          </a>
+          <span class="oss-description">
+            Julia-based implementation of interface for macromolecular structure prediction models along with popular
+            models such as AlphaFold, Boltz, and Protenix.
+          </span>
+        </div>
+        <div class="oss-item">
+          <a class="oss-title-link" href="https://github.com/Janssena/LuxTriangleAttention.jl" target="_blank">
+            LuxTriangleAttention.jl
+          </a>
+          <span class="oss-description">
+            Julia package implementing algorithms for super-fast Triangle Attention.
+          </span>
+        </div>
+        <div class="oss-item">
+          <a class="oss-title-link" href="https://github.com/Janssena/LuxProteinMPNN.jl" target="_blank">
+            LuxProteinMPNN.jl:
+          </a>
+          <span class="oss-description">
+            Pure Julia implementation of the popular ProteinMPNN sequence recovery model.
+          </span>
+        </div>
+        <div class="oss-item">
+          <a class="oss-title-link" href="https://github.com/Janssena/NaturalOptimisers.jl"
+            target="_blank">NaturalOptimisers.jl
+          </a>
+          <span class="oss-description">
+            Implementation of plug-and-play optimisers to turn any problem into a Variational problem!
+            Uses efficient gradient estimation and natural parameter updates to speed up convergence.
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="footer">
+    <a class="icon-link" target="_blank" href="https://www.researchgate.net/profile/Alexander-Janssen-6">
+      <span class="footer-icon icon-scholar"></span>
+    </a>
+    <a class="icon-link" target="_blank" href="https://github.com/Janssena">
+      <span class="footer-icon icon-github"></span>
+    </a>
+    <a class="icon-link" href="mailto:alexanderjanssen@live.com">
+      <span class="footer-icon icon-mail"></span>
+    </a>
+  </div>
+
+</body>
+
+</html>

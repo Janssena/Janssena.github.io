@@ -1,0 +1,133 @@
+<!-- 
+  IMPORTANT! 
+  
+  Keep this file unchanged to use as a template for all future project pages. 
+
+  For every new project you add to your portfolio, make a copy of this file in the
+  'project-pages' folder with a name related to the project.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <!-- 
+      TODO
+
+      Upload your Unemployable (or whatever photo you like) to the assets/images folder
+      and change the name of the image below to match the uploaded one
+
+      Change the title in the <title> tag to whatever you would like the title of your portfolio to be
+
+      This should be the same across all pages.
+     -->
+  <link rel="icon" href="../assets/images/aj-small.png" />
+  <title>Project -- phems.eu</title>
+  <meta name="description" content="My portfolio.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/typography.css">
+  <link rel="stylesheet" href="../css/utilities.css">
+
+  <script defer src="../js/script.js"></script>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <a class="nav-title-link" href="/index.html">
+      <span class="nav-logo"></span>
+      <span class="nav-title">Janssen et al.</span>
+    </a>
+    <a class="button" href="mailto:alexanderjanssen@live.com">
+      <span class="button-text">Contact Me</span>
+    </a>
+  </div>
+
+  <div id="main-content">
+
+    <div id="project-header">
+      <div class="main-title">> phems.eu</div>
+      <div class="body-text">Enabling privacy-aware sharing of sensitive medical data across paediatric hospitals in
+        Europe using federated learning.</div>
+      <image class="project-header-image" src="../assets/images/phems.png">
+    </div>
+
+    <div id="project-details">
+      <div class="project-details-content">
+        <div class="subheader-text">Background</div>
+        <div class="body-text">
+          The PHEMS project (an EU Horizon initiative) is a groundbreaking effort poised to revolutionise healthcare
+          data management and utilisation across Europe. It is particularly focused on addressing the challenges posed
+          by privacy concerns and the complexity of data sharing due to varying interpretations of the EU General Data
+          Protection Regulation (GDPR).
+        </div>
+        <div class="body-text">
+          To address these systemic barriers, PHEMS is developing the Paediatric Health Data Space (PHDS): a trusted,
+          privacy-preserving ecosystem dedicated to sharing paediatric health data. PHDS leverages the foundational
+          technical infrastructure and governance framework established by PHEMS, thereby making the secondary use of
+          health data ethical, efficient, and scalable. This capability will significantly advance research,
+          benchmarking, and innovation in paediatric care.
+        </div>
+        <div class="subheader-text">Objectives and Achievements</div>
+        <div class="body-text">
+          My role involves leading one of the three clinical use-cases, which focusses on developing AI models to
+          accurately predict drug exposure in patients suffering from rare bleeding disorders. A major hurdle in this
+          project is the inherent sparsity of data for these patient cohorts, compounded by the fact that treatment is
+          often administered at home and thus missing from the electronic health record (EHR), which serves as our
+          primary data source within PHEMS.
+        </div>
+        <div class="body-text">
+          To overcome this, we have developed a robust Bayesian generative model capable of reliably inferring missing
+          dosage information based on readily available patient characteristics and lab measurements. By employing
+          Bayesian methods, this model automatically incorporates prediction uncertainty, which we can naturally
+          propagate to our drug exposure model to mitigate the risk of overfitting. Our model significantly reduced the
+          Mean Absolute Percentage Error (MAPE) from a current standard of 30–50% down to approximately 20% when
+          compared to true dosages (where available in clinical notes). Furthermore, the model’s robustness is
+          demonstrated by a significant reduction in the quantile calibration error, dropping from 0.1–0.2 to 0.04.
+          Finally, our complete model pipeline is designed for continuous improvement, allowing the generative model to
+          be iteratively refined based on updates and insights from the drug exposure model.
+        </div>
+        <div class="subheader-text">Responsibilities</div>
+        <div class="body-text">
+          As use-case leader, I am responsible for defining and delivering all promised project deliverables and
+          ensuring the technical infrastructure meets our requirements. I worked with clinicians to complete our
+          OMOP data dictionary so that partners operate using common vocabulary when referencing specific variables. I
+          regularly meet with our technical staff to discuss the federated architecture, update upper management on
+          our progress, and supervise (PhD) students working on the project. Technically, I manage the full deployment
+          cycle on the Azure platform: setting up the federated nodes, preparing containerized model code, and
+          overseeing the deployment of federated learning code.
+        </div>
+        <div class="body-text">
+          Crucially, as we are the primary use-case for training end-to-end AI models in a traditional online
+          federated learning framework, our project sets the standard for PHDS utility, especially in the context of
+          rare disease. We have recently begun enrolling new centres into the project, and our use-case is an accessible
+          entry points for new members owing to its relatively simple data mapping requirements.
+        </div>
+        <div class="body-text">
+          The project is set to end in September, with the PHDS and the results of the project being presented at
+          the
+          Paediatric Innovation Day 2026 in Helsinki.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer">
+    <a class="icon-link" target="_blank" href="https://www.researchgate.net/profile/Alexander-Janssen-6">
+      <span class="footer-icon icon-scholar"></span>
+    </a>
+    <a class="icon-link" target="_blank" href="https://github.com/Janssena">
+      <span class="footer-icon icon-github"></span>
+    </a>
+    <a class="icon-link" href="mailto:alexanderjanssen@live.com">
+      <span class="footer-icon icon-mail"></span>
+    </a>
+  </div>
+
+</body>
+
+</html>

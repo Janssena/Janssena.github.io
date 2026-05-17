@@ -1,0 +1,125 @@
+<!-- 
+  IMPORTANT! 
+  
+  Keep this file unchanged to use as a template for all future project pages. 
+
+  For every new project you add to your portfolio, make a copy of this file in the
+  'project-pages' folder with a name related to the project.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <!-- 
+      TODO
+
+      Upload your Unemployable (or whatever photo you like) to the assets/images folder
+      and change the name of the image below to match the uploaded one
+
+      Change the title in the <title> tag to whatever you would like the title of your portfolio to be
+
+      This should be the same across all pages.
+     -->
+  <link rel="icon" href="../assets/images/aj-small.png" />
+  <title>Project -- Binder design</title>
+  <meta name="description" content="My portfolio.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/typography.css">
+  <link rel="stylesheet" href="../css/utilities.css">
+
+  <script defer src="../js/script.js"></script>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <a class="nav-title-link" href="/index.html">
+      <span class="nav-logo"></span>
+      <span class="nav-title">Janssen et al.</span>
+    </a>
+    <a class="button" href="mailto:alexanderjanssen@live.com">
+      <span class="button-text">Contact Me</span>
+    </a>
+  </div>
+
+  <div id="main-content">
+
+    <div id="project-header">
+      <div class="main-title">> Binder design</div>
+      <div class="body-text">Design and development of a flexible optimisation pipeline for (contrastive) multi-target
+        binder design.</div>
+      <image class="project-header-image" src="../assets/images/binder-design.png">
+    </div>
+
+    <div id="project-details">
+      <div class="project-details-content">
+        <div class="subheader-text">Background</div>
+        <div class="body-text">
+          This ongoing project was spearheaded as part of a research visit to the Translational Immunology Lab headed by
+          A/Prof Vivek Naranbhai at Monash University, Melbourne in early 2026. Now, as part of the THETA-TEAM, we
+          continue our collaboration to develop and implement computational methods to design novel drug candidates to
+          treat cancer.
+        </div>
+        <div class="body-text">
+          Ever since the release of AlphaFold2, the field of structural biology has changed dramatically. There has been
+          a boom in the release of new and improved structure prediction models that allow users to solve the structure
+          of a large proportion of previously unsolved proteins. These models can even be used to “hallucinate” new
+          proteins, and research has pushed for the development of methods for conditional generation of specific
+          proteins or small molecules that serve a specific function.
+        </div>
+        <div class="body-text">
+          However, most of such de novo protein design pipelines are either closed-source or closed-scope: they are
+          frequently developed to excel within a narrow set of boundaries, are difficult to extend, or are
+          computationally prohibitive to deploy at scale.
+        </div>
+        <div class="subheader-text">Objectives and Achievements</div>
+        <div class="body-text">
+          In this project, we set out to design and implement a high-level programming language for computational drug
+          design. This pipeline is based on PyTorch / JAX and implements target and/or binder requirements and
+          constraints as re-usable loss terms that can be combined to optimise for drug candidates that fulfil different
+          types of purposes. Another benefit is that it is simple to extend these losses to multiple targets, enabling
+          the user to incorporate both specificity and generalised binding as learnable properties.
+        </div>
+        <div class="body-text">
+          We have used this pipeline to generate different binders that for example recognise and bind to conserved
+          sites amongst multiple targets and even to specifically recognise and bind to phosphorylated sites or even
+          single point mutations. In the lab, we compared our method to a previous SOTA approach (BindCraft) where it
+          would take 2-3 weeks to design, inspect, and digitally evaluate 100 candidates to select for binding
+          specificity given a positive and negative target. In contrast, our pipeline was able to directly optimise for
+          specificity and deliver 100 candidates within 48 hours.
+        </div>
+        <div class="subheader-text">Responsibilities</div>
+        <div class="body-text">
+          I am currently working on designing novel protein-based binders to detect specific mutated forms of well-known
+          oncoproteins. I am also working on enhancing the pipeline to improve the performance of our antibody and
+          antibody-binder design pipelines. In these projects, I work closely with the bio-medical staff at the
+          Translational Immunology lab and am able to meaningfully contribute to discussion regarding experimental setup
+          and evaluation given my history as a biomedical scientist. I am an active part of the THETA-TEAM, an
+          international team encompassing a diverse range of experts including AI scientists, structural biologists,
+          immunologists, and medical doctors, to bring together strong and varied backgrounds to tackle complex
+          challenges in the intersection between AI and health.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer">
+    <a class="icon-link" target="_blank" href="https://www.researchgate.net/profile/Alexander-Janssen-6">
+      <span class="footer-icon icon-scholar"></span>
+    </a>
+    <a class="icon-link" target="_blank" href="https://github.com/Janssena">
+      <span class="footer-icon icon-github"></span>
+    </a>
+    <a class="icon-link" href="mailto:alexanderjanssen@live.com">
+      <span class="footer-icon icon-mail"></span>
+    </a>
+  </div>
+
+</body>
+
+</html>

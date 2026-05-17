@@ -1,0 +1,215 @@
+/* Icons (CSS Mask System) */
+
+.right-arrow-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-top: 1px;
+  background-color: currentColor;
+  /* Automatically inherits current text/button color */
+  -webkit-mask: url("../assets/icons/arrow-right.svg") no-repeat center;
+  mask: url("../assets/icons/arrow-right.svg") no-repeat center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+.footer-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: var(--text-color);
+  /* Brand color for footer icons */
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  transition: background-color 0.2s ease;
+}
+
+/* Specific Icon Paths for CSS Masks */
+.icon-github {
+  -webkit-mask-image: url("../assets/icons/github.svg");
+  mask-image: url("../assets/icons/github.svg");
+}
+
+.icon-scholar {
+  -webkit-mask-image: url("../assets/icons/scholar.svg");
+  mask-image: url("../assets/icons/scholar.svg");
+}
+
+.icon-mail {
+  -webkit-mask-image: url("../assets/icons/mail.svg");
+  mask-image: url("../assets/icons/mail.svg");
+}
+
+a.icon-link {
+  transition: transform 200ms ease-in-out;
+}
+
+a.icon-link:hover {
+  cursor: pointer;
+  stroke-width: 5;
+  margin: 0;
+  transform: rotate(15deg);
+}
+
+
+/* Navbar Styling */
+
+.navbar {
+  width: 100%;
+  padding: 30px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  /* Uniform glassmorphism look */
+  background-color: rgba(var(--background-color), 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1000;
+  
+  /* Smooth animation for scrolling effects */
+  transition: box-shadow 0.3s ease, padding 0.3s ease;
+}
+
+/* Applies a high-fidelity ambient shadow when the user scrolls down */
+.navbar.scrolled {
+  box-shadow: 0 4px 25px rgba(30, 6, 42, 0.04); /* Harmonized ambient shadow */
+}
+
+.nav-title-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font-size: 24px;
+  /* Provides the base scaling for the logo */
+}
+
+/* CSS Houdini Custom Properties for Logo Gradient Animation */
+@property --logo-grad-1 {
+  syntax: "<color>";
+  initial-value: #C31432;
+  /* Rich Dark Red */
+  inherits: false;
+}
+
+@property --logo-grad-2 {
+  syntax: "<color>";
+  initial-value: #240b36;
+  /* Deep Purple */
+  inherits: false;
+}
+
+.nav-logo {
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  /* Stays proportional to text */
+
+  /* Bulletproof legacy browser fallback: solid brand color */
+  background-color: var(--text-color);
+
+  /* High-performance gradient using the registered Houdini variables */
+  background: linear-gradient(135deg,
+      var(--logo-grad-1),
+      var(--logo-grad-2));
+
+  /* 8-second smooth transition cycling infinite loop */
+  animation: logo-houdini-colors 8s ease-in-out infinite alternate;
+
+  -webkit-mask: url("../assets/icons/logo.svg") no-repeat center;
+  mask: url("../assets/icons/logo.svg") no-repeat center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+@keyframes logo-houdini-colors {
+  0% {
+    --logo-grad-1: #C31432;
+    /* Deep red */
+    --logo-grad-2: #240b36;
+    /* Deep navy purple */
+  }
+
+  33% {
+    --logo-grad-1: #7F00FF;
+    /* Electric Violet */
+    --logo-grad-2: var(--text-color);
+    /* Brand Navy Black */
+  }
+
+  66% {
+    --logo-grad-1: #FF416C;
+    /* Bright Magenta-Red */
+    --logo-grad-2: #8A2387;
+    /* Royal Purple */
+  }
+
+  100% {
+    --logo-grad-1: #4e54c8;
+    /* Darker Indigo */
+    --logo-grad-2: #C31432;
+    /* Deep red transition */
+  }
+}
+
+.nav-title-link:hover {
+  text-decoration: underline;
+}
+
+/* Button Styling */
+
+a.button {
+  padding: 8px 16px;
+  border: 3px solid var(--text-color);
+  border-radius: 50px;
+  color: black;
+  text-decoration: none;
+  width: fit-content;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+a.button:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  cursor: pointer;
+}
+
+
+/* Footer Styling */
+
+#footer {
+  width: 100%;
+  display: flex;
+  padding: 30px 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Link Styling */
+a.no-underline {
+  text-decoration: none;
+  /* color: black */
+}
+
+a.no-underline:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Small devices (portrait tablets and large phones, 800px and below) */
+@media only screen and (max-width: 800px) {
+  #footer {
+    padding: 20px 20px;
+  }
+}

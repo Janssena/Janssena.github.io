@@ -1,0 +1,119 @@
+<!-- 
+  IMPORTANT! 
+  
+  Keep this file unchanged to use as a template for all future project pages. 
+
+  For every new project you add to your portfolio, make a copy of this file in the
+  'project-pages' folder with a name related to the project.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <!-- 
+      TODO
+
+      Upload your Unemployable (or whatever photo you like) to the assets/images folder
+      and change the name of the image below to match the uploaded one
+
+      Change the title in the <title> tag to whatever you would like the title of your portfolio to be
+
+      This should be the same across all pages.
+     -->
+  <link rel="icon" href="../assets/images/aj-small.png" />
+  <title>Project -- Ribosome.jl</title>
+  <meta name="description" content="My portfolio.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/typography.css">
+  <link rel="stylesheet" href="../css/utilities.css">
+
+  <script defer src="../js/script.js"></script>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <a class="nav-title-link" href="/index.html">
+      <span class="nav-logo"></span>
+      <span class="nav-title">Janssen et al.</span>
+    </a>
+    <a class="button" href="mailto:alexanderjanssen@live.com">
+      <span class="button-text">Contact Me</span>
+    </a>
+  </div>
+
+  <div id="main-content">
+
+    <div id="project-header">
+      <div class="main-title">> Ribosome.jl</div>
+      <div class="body-text">
+        A fast, high-level programming language for generative protein design that runs on any computational
+        infrastructure.
+      </div>
+      <image class="project-header-image" src="../assets/images/ribosome.png">
+    </div>
+
+    <div id="project-details">
+      <div class="project-details-content">
+        <div class="subheader-text">Background</div>
+        <div class="body-text">
+          Many protein design pipelines implemented in Python and based around PyTorch or JAX, limiting users to use
+          models defined in the corresponding framework while being purpose-build for a specific computational
+          infrastructure (CUDA, essentially). On the other hand, the Julia programming language aims to directly address
+          this two-language problem: it allows for flexible prototyping as in Python while also enabling users to write
+          fast, optimised code at C++ level speed. Moving code to specific devices is as simple as running
+          `to_device(x)` and multiple dispatch takes care of running device optimised code. This means that all code can
+          be written in pure Julia without requiring additional frameworks to improve execution speed. Recently,
+          Reactant.jl has also enabled users to directly compile Julia functions to XLA-optimised code, meaning generic
+          Julia code can directly compete with JAX without needing any code changes.
+        </div>
+        <div class="subheader-text">Objectives and Achievements</div>
+        <div class="body-text">
+          This project focusses on implementing a protein design pipeline in Julia that supports all GPU infrastructures
+          (including TPU through Reactant.jl) and can call any ML model through the Open Neural Network Exchange (ONNX)
+          framework (including Python models). PyTorch or JAX models can also be compiled down to StableHLO to support
+          native Julia gradient estimation using Enzyme.jl. This means that the ecosystem does not require users to port
+          their Python models to Julia before they can start using the pipeline.
+        </div>
+        <div class="body-text">
+          Furthermore, the project aims to implement a high-level programming language for molecular design, allowing
+          users to select any number of binding targets, provide specific design constraints like length, solubility or
+          symmetry, as well as create highly tailored Energy functions from a set of predefined or custom loss terms to
+          conditionally optimise their design for specific features. The language will be design-agnostic, meaning that
+          users can re-use existing pipelines no matter what they are optimising (e.g. amino acid sequences or molecular
+          graphs).
+        </div>
+        <div class="body-text">
+          In parallel, I have been working on porting popular structure prediction models (such as Boltz2, AlphaFold and
+          Protenix) to Julia. The benefits here are two-fold: multiple dispatch ensures that optimised code is run for
+          each specific platform, while the LLVM compiler generates optimised code that is capable of improving run
+          times over equivalent Python code. For example, for specific compute-heavy layers in AlphaFold2 (including
+          Triangle Attention layers) we found that Julia implementations resulted in 1.1-1.5x improvements in run time
+          on CPU and Metal GPU. Similarly, early results in LuxProteinMPNN.jl depicts nearly a 2x speed-up over the
+          original ProteinMPNN PyTorch model on Metal hardware when sampling amino acid sequences based on 3D structure
+          coordinates. More extensive benchmarking is currently planned.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer">
+    <a class="icon-link" target="_blank" href="https://www.researchgate.net/profile/Alexander-Janssen-6">
+      <span class="footer-icon icon-scholar"></span>
+    </a>
+    <a class="icon-link" target="_blank" href="https://github.com/Janssena">
+      <span class="footer-icon icon-github"></span>
+    </a>
+    <a class="icon-link" href="mailto:alexanderjanssen@live.com">
+      <span class="footer-icon icon-mail"></span>
+    </a>
+  </div>
+
+</body>
+
+</html>

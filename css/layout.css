@@ -1,0 +1,255 @@
+:root {
+  --background-color: 250, 243, 235;
+  --text-color: #1e062a;
+}
+
+* {
+  color: var(--text-color);
+  box-sizing: border-box;
+}
+
+html {
+  background: rgb(var(--background-color));
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Main Page Layout */
+
+#main-content {
+  margin: 225px 425px;
+  display: flex;
+  flex-direction: column;
+  gap: 96px;
+}
+
+/* Portfolio Header */
+
+#portfolio-header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+#portfolio-header-image-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-basis: 50%;
+}
+
+.portfolio-header-image {
+  width: 100%;
+  height: auto;
+}
+
+#portfolio-header-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  flex-basis: 50%;
+}
+
+/* About Section */
+
+#about-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+/* Project Section */
+
+#my-work-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  scroll-margin-top: 130px;
+  /* Offsets the sticky navbar + provides visual headroom */
+}
+
+.projects-container {
+  display: flex;
+  gap: 34px 16px;
+  flex-wrap: wrap;
+}
+
+/* Project Cards */
+
+.project-card {
+  max-width: calc((100% - 32px) / 3);
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.project-card-text-container {
+  flex-direction: column;
+  display: flex;
+  gap: 16px
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Project Pages */
+
+#project-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-header-image {
+  width: 100%;
+  height: auto;
+}
+
+#project-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-details-content {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+/* Project Gallery */
+
+#project-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-gallery-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 34px 16px;
+}
+
+.gallery-image-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gallery-image-container.half-width {
+  width: calc((100% - 16px) / 2);
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+}
+
+
+/* Extra Extra large devices (large laptops and desktops, 1200px and below) */
+@media only screen and (max-width: 1600px) {
+  #main-content {
+    margin: 225px 275px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and below) */
+@media only screen and (max-width: 1200px) {
+  #main-content {
+    margin: 225px 175px;
+  }
+}
+
+/* Large devices (laptops/desktops, 1000px and below) */
+@media only screen and (max-width: 1000px) {
+  #main-content {
+    margin: 225px 75px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 800px and below) */
+@media only screen and (max-width: 800px) {
+  #main-content {
+    margin: 150px 50px;
+  }
+
+  #portfolio-header {
+    flex-direction: column;
+  }
+
+  .project-card {
+    max-width: calc((100% - 16px) / 2);
+  }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and below) */
+@media only screen and (max-width: 600px) {
+  #main-content {
+    margin: 125px 20px;
+  }
+
+  .project-card {
+    max-width: 100%;
+  }
+}
+
+/* Open Source Project List */
+.oss-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-top: 2px solid var(--text-color);
+  margin-top: 20px;
+}
+
+.oss-item {
+  padding: 32px 16px;
+  /* Spacious vertical room and elegant horizontal indentation */
+  border-bottom: 2px solid var(--text-color);
+  font-size: 18px;
+  line-height: 1.7;
+  transition: background-color 0.2s ease;
+}
+
+.oss-item:hover {
+  background-color: rgba(12, 6, 42, 0.015);
+}
+
+.oss-title-link {
+  font-weight: 700;
+  color: var(--text-color);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  margin-right: 4px;
+  transition: opacity 0.2s ease;
+}
+
+.oss-title-link:hover {
+  opacity: 0.7;
+  text-decoration-thickness: 2px;
+}
+
+.oss-description {
+  font-weight: 500;
+}
