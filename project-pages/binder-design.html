@@ -83,7 +83,10 @@
           design. This pipeline is based on PyTorch / JAX and implements target and/or binder requirements and
           constraints as re-usable loss terms that can be combined to optimise for drug candidates that fulfil different
           types of purposes. Another benefit is that it is simple to extend these losses to multiple targets, enabling
-          the user to incorporate both specificity and generalised binding as learnable properties.
+          the user to incorporate both specificity and generalised binding as learnable properties. For optimisation, we
+          have access to several high performance computing clusters, including M3 Massive (Monash University cluster) and 
+          NCI Gadi, the Australian national computing cluster. Here, we can run the model in parallel on multiple GPUs by 
+          calculating gradient for multiple diffusion sample on a dedicated GPUs.
         </div>
         <div class="body-text">
           We have used this pipeline to generate different binders that for example recognise and bind to conserved
